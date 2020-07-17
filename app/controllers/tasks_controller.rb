@@ -3,7 +3,6 @@ class TasksController < ApplicationController
     before_action :require_user_logged_in, only: [:index, :show]
     
     def user
-      @user = user  
     end    
     
     def index
