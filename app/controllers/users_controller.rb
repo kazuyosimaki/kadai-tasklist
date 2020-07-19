@@ -5,9 +5,7 @@ class UsersController < ApplicationController
     @users = User.order(id: :desc).page(params[:page]).per(25)
   end
 
-  def show
-    redirect_to root_url
-  end
+  
 
   def new
     @user = User.new
