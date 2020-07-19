@@ -3,14 +3,9 @@ class TasksController < ApplicationController
     before_action :require_user_logged_in
     before_action :correct_user, only: [:edit, :destroy, :show, :update]
     
-    def user
-    end    
     
     def index
         @tasks = current_user.tasks
-    end
-    
-    def show
     end
     
     def new
@@ -29,9 +24,6 @@ class TasksController < ApplicationController
             flash.now[:danger] = 'Task が投稿されませんでした'
             render :new
         end    
-    end
-    
-    def edit
     end
     
     def update
